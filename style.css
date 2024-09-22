@@ -1,11 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    "dashboard header header header"
+    "dashboard content content content"
+    "dashboard content content content"
+    "dashboard content content content"
+    "dashboard content content content"
+    "dashboard content content content";
+}
+
 .header {
-    background-color: green;
+    grid-area: header;
+    background-color: #f1f5f9;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;   
+    gap: 10%;
+    margin: 1%;
+}
+
+.header-top-left {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    justify-items: center;
+    align-items: center;
+}
+
+.header-top-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+input.search-box {
+    border-radius: 50px;
+    border: none;
+    width: 100%;
+    height: 35px;
+}
+
+.header .profile-icon-small{
+    border-radius: 50%;
+    width: 3em;
+}
+
+img.header-icon, img.project-icon{
+    width: 1.75em;
+    filter: invert(100%);
+
+}
+
+.header-bottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 1%;
+}
+
+.header-greeting {
+    display: flex;
+    margin-left: 1%;
+}
+
+.header .profile-icon-big {
+    border-radius: 50%;
+    width: 75px;
+}
+
+.header-greeting-text {
+    display: grid;
+    align-content: center;
+    margin: 2%;
+    gap: 1%;
+}
+
+.intro-top-text {
+    font-weight: bolder;
+    font-size: 0.75em;
+}
+
+.intro-bottom-text {
+    font-weight: bolder;
+    font-size: 1.25em;
+}
+
+.toolbar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.toolbar button{
+    background-color: #0ea5e9;
+    border: none;
+    padding: 0.75em 2em 0.75em 2em;
+    border-radius: 20px;
+    color:#f1f5f9;
 }
 
 .sidebar {
+    grid-area: dashboard;
     background-color: aqua;
 }
 
-.content {
+.project-container{
     background-color: red;
 }
+
+.announcement-container {
+    background-color: orange;
+}
+
+.trending-container {
+    background-color: orangered;
+}
+
