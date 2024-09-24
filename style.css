@@ -115,7 +115,16 @@ img.header-icon, img.project-icon{
 
 .sidebar {
     grid-area: dashboard;
-    background-color: aqua;
+    background-color: #0ea5e9;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    gap: 1%;
+}
+
+.navigation-row, .user-option-row, .dashboard-row{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+
 }
 
 .project-container{
